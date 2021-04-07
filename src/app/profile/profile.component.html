@@ -1,0 +1,15 @@
+<section class="profile">
+  <h2 *ngIf="name" class="profile__greeting">Welcome {{ name }}</h2>
+  <img [src]="imageUrl" alt="picture of me" class="profile__image" />
+  <ul class="interest__list">
+    <li *ngFor="let interest of interests" class="interest__item">
+      {{ interest }}
+    </li>
+  </ul>
+  <button (click)="editClick()">{{ buttonName }}</button>
+  <ng-container *ngIf="buttonClicks > 0">
+    <label>Update your name</label>
+    <input type="text" [(ngModel)]="name" />
+    <button (click)="handleReset()">Reset Name</button>
+  </ng-container>
+</section>
