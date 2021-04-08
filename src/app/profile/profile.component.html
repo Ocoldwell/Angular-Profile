@@ -6,7 +6,7 @@
       {{ interest }}
     </li>
   </ul>
-  <button (click)="editClick()">{{ buttonName }}</button>
+  <button (click)="editClick()" >{{ buttonName }}</button>
   <ng-container *ngIf="buttonClicks > 0">
     <label>Update your name</label>
     <input type="text" [(ngModel)]="name" />

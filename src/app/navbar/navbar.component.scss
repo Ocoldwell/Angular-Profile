@@ -1,8 +1,6 @@
-.nav{
-  background-color: navy;
-  width: 100%;
-  text-align: center;
-}
-.nav__title{
-  color: white;
+.nav__title {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  color: red;
 }

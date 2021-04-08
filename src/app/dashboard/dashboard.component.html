@@ -1,0 +1,20 @@
+<section class="dashboard">
+  <input
+    type="text"
+    [(ngModel)]="input"
+    aria-placeholder="Let's check out some albums, type your artist"
+  />
+  <select name="albumselection">
+    <option *ngFor="let album of albums" value="{{ album.strAlbum }}">
+      {{ album.strAlbum }}
+    </option>
+  </select>
+  <button (click)="handleAlbumSearch()">Search Albums</button>
+  
+</section>
+<div>
+  <ng-container>
+    <app-searchresult *ngFor="let album of albums" [album]="album">
+    </app-searchresult>
+  </ng-container>
+</div>
