@@ -1,5 +1,5 @@
-import { createOfflineCompileUrlResolver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
-  name: string = 'Oliver';
+  name: string;
+  age: number = 31.256678;
   interests = ['Coding', 'Reading', 'Gardening'];
   isAdmin: boolean = true;
   buttonClicks: number = 0;
@@ -27,7 +28,13 @@ export class ProfileComponent implements OnInit {
   handleReset() {
     this.name = 'Ollie';
   }
-  constructor() {}
+  constructor(private userService: UserService) {
+    this.name = userService.user.displayName;
+  }
+
+  handleLogin() {
+    this.userService.login();
+  }
 
   ngOnInit(): void {}
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IAlbumInfo } from '../dashboard.models';
 
 @Component({
@@ -8,7 +8,7 @@ import { IAlbumInfo } from '../dashboard.models';
 })
 export class SearchresultComponent implements OnInit {
   @Input() album: IAlbumInfo;
-  
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,19 +1,2 @@
-.main {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  .nav  {
-    width: 100%;
-    background-color: whitesmoke;
-    text-align: center;
-    grid-area: 'nav';
-  }
-  .footer {
-    width: 100%;
-    grid-area: 'footer';
-  }
-  &__title {
-  color: navy;
-}
-}
+
 

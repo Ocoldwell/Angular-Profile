@@ -1,6 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { IAlbumInfo, IAlbumResponse, IArtistInfo, IArtistResponse } from './dashboard.models';
+import {
+  IAlbumInfo,
+  IAlbumResponse,
+  IArtistInfo,
+  IArtistResponse,
+} from './dashboard.models';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -13,14 +18,20 @@ export class DashboardComponent implements OnInit {
   artist: IArtistInfo[];
   albums: IAlbumInfo[];
   selectedAlbums: object[];
-  filterObj: object = {
-    albumSearch:this.handleAlbumSearch,
-    artistSearch: this.handleArtistSearch
-  }
+  selector: string = '';
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {}
-
+  handleSearch() {
+    switch (this.selector) {
+      case 'Artist':
+        return this.handleArtistSearch();
+      case 'Album':
+        return this.handleAlbumSearch();
+      default:
+        return this.handleAlbumSearch();
+    }
+  }
   handleAlbumSearch() {
     this.http
       .get(
@@ -35,14 +46,19 @@ export class DashboardComponent implements OnInit {
   }
 
   handleArtistSearch() {
-    this.http.get(`https://www.theaudiodb.com/api/v1/json/1/searchalbum.php?s=${this.input}`
-    )
-    .toPromise()
-    .then((response: IArtistResponse) => {
-      this.artist = response.artists;
-      console.log(this.artist)
-    })
+    this.http
+      .get(
+        `https://www.theaudiodb.com/api/v1/json/1/searchalbum.php?s=${this.input}`
+      )
+      .toPromise()
+      .then((response: IArtistResponse) => {
+        this.artist = response.artists;
+        console.log(this.artist);
+      });
   }
 
-  
+
+  handleChildChange(filter) {
+    this.selector = filter;
+  }
 }
