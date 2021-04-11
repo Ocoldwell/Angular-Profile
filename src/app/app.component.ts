@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Test Angular Profile Page';
+  title: string = 'Test Angular Profile Page';
+  myColor: string= '#C2185B'
 }

@@ -7,7 +7,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SearchresultComponent } from './dashboard/searchresult/searchresult.component';
 import { FilterDropdownComponent } from './dashboard/filter-dropdown/filter-dropdown.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -24,6 +23,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRippleModule} from '@angular/material/core'
 
 @NgModule({
   declarations: [
@@ -31,7 +31,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ProfileComponent,
     FooterComponent,
     DashboardComponent,
-    SearchresultComponent,
     FilterDropdownComponent,
     NavigationComponent
   ],
@@ -41,7 +40,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     FormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),   
-    AngularFireAuthModule, BrowserAnimationsModule, LayoutModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatFormFieldModule
+    AngularFireAuthModule, BrowserAnimationsModule, LayoutModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatFormFieldModule,  MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

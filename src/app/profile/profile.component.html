@@ -1,18 +1,35 @@
-<section class="profile">
+<mat-card class="profile__container">
   <h2 *ngIf="name" class="profile__greeting">Welcome {{ name }}</h2>
-  <img [src]="imageUrl" alt="picture of me" class="profile__image" />
-  <h2>{{age}}</h2>
-  <ul class="interest__list">
-    <li *ngFor="let interest of interests" class="interest__item">
-      {{ interest }}
-    </li>
-    
-  </ul>
-  <button (click)="handleLogin()" class='mat-raised-button'> Login</button>
-  <button (click)="editClick()" class='mat-raised-button'>{{ buttonName }}</button>
-  <ng-container *ngIf="buttonClicks > 0">
-    <label>Update your name</label>
-    <input type="text" [(ngModel)]="name" />
-    <button (click)="handleReset()" class='mat-raised-button'>Reset Name</button>
-  </ng-container>
-</section>
+  <div class="profile__information">
+    <img
+      mat-card-sm-img
+      [src]="imageUrl"
+      alt="picture of John Smith"
+      class="profile__image"
+    />
+    <mat-card-title>{{ name }}</mat-card-title>
+    <mat-card-content class="profile__about">
+      Hi, I'm Ollie, I'm here for the music information.
+      <mat-card-subtitle>My interests:</mat-card-subtitle>
+      <ul class="interest__list">
+        <li *ngFor="let interest of interests" class="interest__item">
+          {{ interest }}
+        </li>
+      </ul>
+    </mat-card-content>
+  </div>
+
+  <mat-card-actions>
+    <button (click)="handleLogin()" class="mat-raised-button">Login</button>
+    <button (click)="editClick()" class="mat-raised-button">
+      {{ buttonName }}
+    </button>
+    <ng-container *ngIf="buttonClicks > 0">
+      <label>Update your name</label>
+      <input type="text" [(ngModel)]="name" />
+      <button (click)="handleReset()" class="mat-raised-button">
+        Reset Name
+      </button>
+    </ng-container>
+  </mat-card-actions>
+</mat-card>

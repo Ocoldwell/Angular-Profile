@@ -17,10 +17,24 @@
     Search Albums
   </button>
 </section>
-<mat-grid-list cols="3" class="grid__resultscontainer">
+
+<mat-grid-list
+  cols="3"
+  class="grid__resultscontainer"
+  *ngIf="selector == 'Album'"
+>
   <mat-grid-tile *ngFor="let album of albums" [album]="album">
     <mat-card>
       <img mat-card-image src="{{ album.strAlbumThumb }}" />
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
+<ng-container *ngIf="selector == 'Artist'">
+  <mat-card class="artist__card" [artist]="artist" *ngFor="let artist of artist" class= 'grid__resultscontainer'
+    ><img mat-card-image src="{{ artist.strArtistThumb }}" />
+    <mat-card>
+      <mat-card-title>{{ artist.strArtist }}</mat-card-title>
+      <mat-card-content>{{ artist.strBiographyEN }}</mat-card-content>
+    </mat-card>
+  </mat-card>
+</ng-container>

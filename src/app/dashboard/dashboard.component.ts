@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
   artist: IArtistInfo[];
   albums: IAlbumInfo[];
   selectedAlbums: object[];
-  selector: string = '';
+  selector: string = 'Album';
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {}
