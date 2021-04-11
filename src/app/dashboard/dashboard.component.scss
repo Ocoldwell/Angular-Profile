@@ -1,8 +1,23 @@
+
 .dashboard__inputcontainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  .dashboard__input {
+    height: 2em;
+    border-radius: 4px;
+    width: 300px;
+  }
+  .search__button {
+    height: 3em;
+    margin: 30px;
+  }
+}
+.album__selector{
+  width: 200px;
+  height: 2em;
+  border-radius: 4px;
 }
 
 .grid__resultscontainer{

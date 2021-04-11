@@ -1,10 +1,11 @@
-<section class="dashboard__inputcontainer">
+<mat-card class="dashboard__inputcontainer">
   <input
     type="text"
     [(ngModel)]="input"
-    aria-placeholder="Let's check out some albums, type your artist"
+    placeholder="Let's check out music"
+    class= "dashboard__input"
   />
-  <select name="albumselection">
+  <select name="albumselection" class="album__selector selection">
     <option *ngFor="let album of albums" value="{{ album.strAlbum }}">
       {{ album.strAlbum }}
     </option>
@@ -13,10 +14,10 @@
     (onChange)="handleChildChange($event)"
     class="results"
   ></app-filter-dropdown>
-  <button (click)="handleSearch()" class="mat-raised-button">
+  <button (click)="handleSearch()" class="mat-raised-button search__button">
     Search Albums
   </button>
-</section>
+</mat-card>
 
 <mat-grid-list
   cols="3"
