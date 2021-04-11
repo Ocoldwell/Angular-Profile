@@ -1,1 +1,18 @@
+.dashboard__inputcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.grid__resultscontainer{
+  width: 80%;
+  left: 240px;
+  
+}
+@media only screen and (max-width: 600px) {
+  .grid__resultscontainer{
+    width: 100%;
+    left: 0;
+  }
+  }

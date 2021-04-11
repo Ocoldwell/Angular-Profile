@@ -1,23 +1,26 @@
-<input
-  type="text"
-  [(ngModel)]="input"
-  aria-placeholder="Let's check out some albums, type your artist"
-/>
-<select name="albumselection">
-  <option *ngFor="let album of albums" value="{{ album.strAlbum }}">
-    {{ album.strAlbum }}
-  </option>
-</select>
-<app-filter-dropdown
-  (onChange)="handleChildChange($event)"
-  class="results"
-></app-filter-dropdown>
-<button (click)="handleSearch()" class ='mat-raised-button'>Search Albums</button>
-<div class="dashboard__searchresults">
-    <app-searchresult
-      *ngFor="let album of albums"
-      [album]="album"
-      (onClick)="handleChildClick($event)"
-    >
-    </app-searchresult>
-</div>
+<section class="dashboard__inputcontainer">
+  <input
+    type="text"
+    [(ngModel)]="input"
+    aria-placeholder="Let's check out some albums, type your artist"
+  />
+  <select name="albumselection">
+    <option *ngFor="let album of albums" value="{{ album.strAlbum }}">
+      {{ album.strAlbum }}
+    </option>
+  </select>
+  <app-filter-dropdown
+    (onChange)="handleChildChange($event)"
+    class="results"
+  ></app-filter-dropdown>
+  <button (click)="handleSearch()" class="mat-raised-button">
+    Search Albums
+  </button>
+</section>
+<mat-grid-list cols="3" class="grid__resultscontainer">
+  <mat-grid-tile *ngFor="let album of albums" [album]="album">
+    <mat-card>
+      <img mat-card-image src="{{ album.strAlbumThumb }}" />
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

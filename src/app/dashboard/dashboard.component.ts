@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {
   IAlbumInfo,
   IAlbumResponse,
@@ -14,6 +14,7 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
+  @Input() cols: number;
   input: string;
   artist: IArtistInfo[];
   albums: IAlbumInfo[];
@@ -48,7 +49,7 @@ export class DashboardComponent implements OnInit {
   handleArtistSearch() {
     this.http
       .get(
-        `https://www.theaudiodb.com/api/v1/json/1/searchalbum.php?s=${this.input}`
+        `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${this.input}`
       )
       .toPromise()
       .then((response: IArtistResponse) => {
