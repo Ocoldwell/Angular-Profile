@@ -2,8 +2,6 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
-<!-- TOC -->autoauto- [Angular Music App](#angular-music-app)auto  - [Getting Started](#getting-started)auto  - [Motivation](#motivation)auto  - [Build Status](#build-status)auto  - [Built with](#built-with)auto  - [Contributions](#contributions)auto  - [License](#license)autoauto<!-- /TOC -->
-
 This project was made using Angular as we learning the new library and this was the challenge we created.
 We used the AudioDB API to display information about arists and their albums, with conditional filtering. Basic functionality is working along with styling using the Angular Material framework.
 
