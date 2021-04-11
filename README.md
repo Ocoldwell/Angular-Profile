@@ -1,27 +1,38 @@
-# Myangularproject
+# Angular Music App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
-## Development server
+This project was made using Angular as we learning the new library and this was the challenge we created.
+We used the AudioDB API to display information about arists and their albums, with conditional filtering. Basic functionality is working along with styling using the Angular Material framework.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+Either clone the repository and run in a local server or go to the page [here]()
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Motivation
 
-## Build
+I made this for a weekly challenge on the Nology.io web development course.
+It was also good practice in using Angular, Typescript and Angular Material.
+It has google login setup via Firebase but no private routing yet, or functionality that I want to hide.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Build Status
 
-## Running unit tests
+The website is functionally complete and the API is queried and shows information.
+I'm fairly happy with the design and navigation features but plan to add other features at a later date, more filters in the search and cleaning of data.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- More filtering options.
 
-## Running end-to-end tests
+## Built with
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Angular
+- Angular Material
+- SASS
+- Typescript
 
-## Further help
+## Contributions
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
+
+## License
+
+The code in this project is licensed under MIT license.
