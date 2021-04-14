@@ -3,11 +3,11 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
 This project was made using Angular as we learning the new library and this was the challenge we created.
-We used the AudioDB API to display information about arists and their albums, with conditional filtering. Basic functionality is working along with styling using the Angular Material framework.
+We used the AudioDB API to display information about artists and their albums, with conditional filtering. Basic functionality is working along with styling using the Angular Material framework.
 
 ## Getting Started
 
-Either clone the repository and run in a local server or go to the page [here]()
+Either clone the repository and run in a local server using ng-serve or go to the page [here]()
 
 ## Motivation
 
